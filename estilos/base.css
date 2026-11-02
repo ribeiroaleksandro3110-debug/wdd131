@@ -70,9 +70,9 @@ body.container {
 
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
 
-    padding-top: 5px;
+    padding-top: 20px;
 }
 
 @media (max-width: 600px) {
@@ -80,7 +80,7 @@ body.container {
 
         grid-template-columns: 1fr;
 
-        grid-template-rows: 118px minmax(220px, 1fr) 160px 134px;
+        grid-template-rows: 100px minmax(220px, 1fr) 160px 134px;
 
         grid-template-areas:
             "header"
