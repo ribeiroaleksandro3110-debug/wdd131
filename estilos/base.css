@@ -42,12 +42,12 @@ body.container {
     justify-content: space-around;
     align-items: center;
 
-    background-color: #16211f;
+    background-color: #121819;
     min-height: 45px;
 }
 
 .navigation a {
-    color: rgb(255, 255, 255);
+    color: hsl(0, 0%, 100%);
     text-decoration: none;
 }
 
@@ -65,14 +65,27 @@ body.container {
 
 .footer {
     grid-area: footer;
-    background-color: #f66a37;
-    color: rgb(0, 0, 0);
-
+    
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
 
-    padding-top: 20px;
+    padding: 15px 10px;
+    border-top: 6px solid #f66a37;
+    border-radius: 0 0 10px 10px;
+
+    background-color: #121819;
+    color: #ffffff;
+
+    text-align: center;
+    .footer p {
+        margin: 0;
+    }   
+    .footer p:last-child {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 600px) {
