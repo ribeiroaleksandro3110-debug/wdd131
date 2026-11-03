@@ -4,18 +4,13 @@
 
 body.container {
     display: grid;
-
     font-family: 'Poppins', sans-serif;
-
     grid-template-columns: 2.8fr 1fr;
-
     grid-template-rows: 130px minmax(296px, 1fr) 134px;
-
     grid-template-areas:
         "header header"
         "main aside"
         "footer footer";
-
     width: 90%;
     min-height: calc(100vh - 20px);
     margin: 10px auto;
@@ -38,6 +33,7 @@ body.container {
     flex: 0.5;
     padding: 25px;
 }
+
 .titulo-curso {
     display: block;
     text-align: center;
@@ -59,8 +55,8 @@ body.container {
     border-radius: 8px;
 
     transition: background-color 0.3s ease,
-                color 0.3s ease,
-                transform 0.3s ease;
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .navigation a:hover {
@@ -76,7 +72,6 @@ body.container {
     outline-offset: 2px;
 }
 
-/* MAIN - coluna principal */
 .main {
     grid-area: main;
     width: 100%;
@@ -92,13 +87,11 @@ body.container {
     padding: 15px;
 }
 
-/* Título principal */
 .main h1 {
     text-align: center;
     margin: 5px 0 18px;
 }
 
-/* Cartões */
 .card {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 120px;
@@ -112,75 +105,67 @@ body.container {
     border-right: 1px solid #aaaaaa;
 }
 
-/* Primeiro cartão */
 .card:first-of-type {
     border-top: 1px solid #aaaaaa;
     border-radius: 8px 8px 0 0;
 }
 
-/* Segundo cartão */
 .card:last-of-type {
     border-bottom: 1px solid #aaaaaa;
     border-radius: 0 0 8px 8px;
 }
 
-/* Títulos */
-.card h2 {
+.card h3 {
     grid-column: 1 / -1;
 
     background-color: #121212;
     color: #ffffff;
 
     text-align: center;
-    padding: 12px;
+    padding: 8px;
     margin: -14px -14px 4px;
 }
 
-/* Título de Bragança */
-.card + .card h2 {
+.card+.card h3 {
     background-color: transparent;
     color: #121212;
     margin: 0;
     padding: 8px;
-    border-bottom: 1px solid #aaaaaa;
+    border-bottom: 1px solid #482020;
 }
 
-/* Parágrafos */
 .card p {
     margin: 8px 0;
     line-height: 1.6;
     grid-column: 1;
 }
 
-/* Imagens */
 .card img {
     grid-column: 2;
     grid-row: 2;
 
     width: 100%;
-    max-width: 120px;
+    max-width: 220px;
     height: auto;
     justify-self: center;
 }
 
-/* Imagem de Bragança à esquerda */
-.card + .card img {
+.card+.card img {
+    grid-column: 2;
+}
+
+.card p {
+    margin: 10px 0;
+    line-height: 1.5;
     grid-column: 1;
 }
 
-/* Texto de Bragança à direita */
-.card + .card p {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-/* ASIDE - coluna de recursos */
 .sidebar {
     grid-area: aside;
 
     width: 100%;
     max-width: 320px;
-    margin: 0 auto;
+    margin: 0px auto;
 
     background-color: #ffffff;
     border: 1px solid #aaaaaa;
@@ -188,7 +173,6 @@ body.container {
     padding: 10px;
 }
 
-/* Cabeçalho da coluna lateral */
 .sidebar h3 {
     background-color: #121212;
     color: #ffffff;
@@ -243,6 +227,6 @@ body.container {
         flex-wrap: wrap;
         gap: 10px;
         padding: 10px;
-   
+
     }
 }
