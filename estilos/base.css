@@ -6,7 +6,7 @@ body.container {
     display: grid;
     font-family: 'Poppins', sans-serif;
     grid-template-columns: 2.8fr 1fr;
-    grid-template-rows: 130px minmax(296px, 1fr) 134px;
+    grid-template-rows: auto minmax(296px, 1fr) auto;
     grid-template-areas:
         "header header"
         "main aside"
@@ -34,11 +34,10 @@ body.container {
     padding: 25px;
 }
 
-.titulo-curso {
+#titulo-curso {
     display: block;
     text-align: center;
 }
-
 .navigation {
     display: flex;
     justify-content: space-around;
@@ -62,7 +61,7 @@ body.container {
 .navigation a:hover {
     background-color: #f66a37;
     color: #121212;
-    transform: translateY(-px);
+    transform: translateY(-2px);
 }
 
 .navigation a:focus-visible {
@@ -138,8 +137,8 @@ body.container {
     margin: 8px 0;
     line-height: 1.6;
     grid-column: 1;
+    grid-row: 2;
 }
-
 .card img {
     grid-column: 2;
     grid-row: 2;
@@ -152,12 +151,6 @@ body.container {
 
 .card+.card img {
     grid-column: 2;
-}
-
-.card p {
-    margin: 10px 0;
-    line-height: 1.5;
-    grid-column: 1;
 }
 
 .sidebar {
@@ -209,12 +202,13 @@ body.container {
     }
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 760px) {
+
     body.container {
+        grid-template-columns: minmax(0, 1fr);
 
-        grid-template-columns: 1fr;
-
-        grid-template-rows: 100px minmax(220px, 1fr) 160px 134px;
+        grid-template-rows: auto auto auto auto;
 
         grid-template-areas:
             "header"
@@ -225,8 +219,39 @@ body.container {
 
     .navigation {
         flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
         padding: 10px;
+    }
 
+    .main {
+        max-width: 100%;
+    }
+
+    .sidebar {
+        max-width: 100%;
     }
 }
+
+@media (max-width: 480px) {
+
+    .card,
+    .card + .card {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .card p,
+    .card + .card p {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .card img,
+    .card + .card img {
+        grid-column: 1;
+        grid-row: auto;
+        max-width: 180px;
+    }
+}
+
+/*amem*/
