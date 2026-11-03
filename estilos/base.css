@@ -45,6 +45,8 @@ body.container {
     align-items: center;
 
     background-color: #121212;
+     color: #ffffff;
+     
     min-height: 45px;
 }
 
