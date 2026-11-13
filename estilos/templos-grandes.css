@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #17324d;
+    background-color: #f2f7fc;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #1769aa;
+    padding: 0.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+p {
+    text-align: center;
+}
+
+nav {
+    margin: 0 auto 2rem;
+    max-width: 90vw;
+}
+
+main {
+    max-width: 70rem;
+    margin: 1rem auto;
+    border: 1px solid #b7cde0;
+    padding: 1rem;
+    background-color: #e6f0f8;
+    gap: 1rem;
+}
+
+main img {
+    display: grid;
+    width: 200px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;  
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #123b5d;
+    align-items: center;
+}
+
+.navigation li {
+    flex: 1 1 auto;
+    /* Qual é a diferença entre automático e 100% flexível? */
+}
+
+.navigation a {
+    display: block;
+    color: #fff;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navigation a:hover {
+    font-weight: 700;
+    background-color: #1769aa;
+    text-decoration: underline;
+    text-decoration-color: #d7ecff;
+}
