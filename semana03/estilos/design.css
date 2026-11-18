@@ -1,5 +1,6 @@
 body {
     font-family: Roboto, helvetica, sans-serif;
+    margin: 1rem;
 }
 
 header,
@@ -9,22 +10,26 @@ footer {
     margin: 0 auto;
 }
 
-marquee {
+section {
     padding: 1rem;
     background-color: #cacaca;
 }
 
 h1 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
 }
 
 main {
     display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-gap: 1.5rem;
 }
 
 h2 {
     color: navy;
     text-align: left;
+    grid-column: 1/3;
 }
 
 article p {
@@ -32,14 +37,27 @@ article p {
 }
 
 .callout {
-    color: #ff0000;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    color: #000;
+    background-color: #eee;
+    grid-column: 1/3;
+    padding: 1rem;
     background-color: #cacaca;
-    padding: 20px;
+
 }
 
-footer {
-    margin-top: 1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    font-size: smaller;
-    text-align: right;
+.banner {
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    background-color: rgb(230 243 254 / 1);
+    font-weight: 700;
+    word-break: break-word;
+    text-align: center;
+
+    footer {
+        margin-top: 1rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: smaller;
+        text-align: center;
+    }
 }
