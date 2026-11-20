@@ -3,8 +3,8 @@
     --azul: #003399;
     --branco: #ffffff;
     --cinza-claro: #f1f2f4;
-    --cinza: #d5d8dd;
-    --cinza-escuro: #323233;
+    --cinza: #b5b6b8;
+    --cinza-escuro: #2d2d2e;
     --preto: #17191f;
     --sombra: 0 5px 20px rgba(0, 0, 0, 0.20);
     --borda-radius: 12px;
@@ -220,7 +220,7 @@ h2 {
     align-items: flex-start;
     gap: 8px;
     padding: 6px 0;
-    border-bottom: 1px solid var(--cinza);
+    border-bottom: 1px solid var(--cinza-escuro);
 }
 
 .weather-item:last-child {
