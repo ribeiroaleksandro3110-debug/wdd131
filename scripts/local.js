@@ -1,4 +1,3 @@
-const fusoHorario = "America/Belem";
 function calcularSensacaoTermica(temperatura, velocidadeVento) {
     return 13.12 + (0.6215 * temperatura) - (11.37 * Math.pow(velocidadeVento, 0.16)) + (0.3965 * temperatura * Math.pow(velocidadeVento, 0.16));
 }
@@ -33,7 +32,6 @@ if (campoModificacao) {
             hour: "2-digit",
             minute: "2-digit",
             hour12: false,
-            timeZone: fusoHorario
         }).format(ultimaModificacao);
         campoModificacao.dateTime = ultimaModificacao.toISOString();
     } else {
