@@ -30,8 +30,11 @@
 
             <figure class="hero-figure">
 
-                <img class="hero-image" src="imagens/belem-capital.jpg"
-                    alt="Vista do complexo do Ver-o-Peso, um dos cartões-postais de Belém do Pará">
+                <picture>
+                    <source media="(max-width: 650px)" srcset="imagens/belem_do_para.jpg">
+                    <img class="hero-image" src="imagens/belem-capital.jpg"
+                        alt="Vista do complexo do Ver-o-Peso, um dos cartões-postais de Belém do Pará">
+                </picture>
 
                 <figcaption>
                     Ver-o-Peso — um dos símbolos de Belém
@@ -79,12 +82,8 @@
                 </div>
 
                 <div class="data-item">
-
-                    <div class="data-item">
-                        <dt>Código internacional:</dt>
-                        <dd>+55 (91)</dd>
-                    </div>
-
+                    <dt>Código internacional:</dt>
+                    <dd>+55 (91)</dd>
                 </div>
             </dl>
 
@@ -100,7 +99,6 @@
                     alt="Ícone representando as condições meteorológicas">
 
                 <dl>
-
 
                     <div class="weather-item">
                         <dt>Temperatura:</dt>
@@ -147,19 +145,18 @@
 <footer class="site-footer">
 
     <p>
-        &copy;2026 <span id="current-year"></span>
+        &copy; <span id="current-year"></span>
         😊Aleksandro Ribeiro Monteiro🤞 | Belém-PA
     </p>
 
     <p>
         Última modificação:
-        <time id="last-modified">
-            Aguardando atualização
+        <time id="last-modified" datetime="2026-11-20T10:45:00Z">
+            20/11/2026, 07:45
         </time>
     </p>
 
 </footer>
-
 
 </body>
 

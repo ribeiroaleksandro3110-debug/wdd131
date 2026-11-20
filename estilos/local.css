@@ -70,6 +70,11 @@ h2 {
     overflow: hidden;
     box-shadow: var(--sombra);
 }
+.hero-figure picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 .hero-image {
     width: 100%;
     height: 100%;
