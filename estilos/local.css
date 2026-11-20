@@ -126,11 +126,22 @@ h2 {
 }
 .data-card h2,
 .weather-card h2 {
+    position: relative;
     color: var(--azul);
     font-size: 1.25rem;
     margin-bottom: 14px;
     padding-bottom: 10px;
-    border-bottom: 3px solid var(--vermelho);
+    border-bottom: 1px solid var(--cinza);
+}
+.data-card h2::after,
+.weather-card h2::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 3rem;
+    height: 3px;
+    background-color: var(--vermelho);
+    content: "";
 }
 .data-card dl {
     display: flex;
