@@ -1,0 +1,62 @@
+const fusoHorario = "America/Belem";
+const temperatura = 27;
+const velocidadeVento = 10;
+function calcularSensacaoTermica(temperatura, velocidadeVento) {
+    return 13.12 + (0.6215 * temperatura) - (11.37 * Math.pow(velocidadeVento, 0.16)) + (0.3965 * temperatura * Math.pow(velocidadeVento, 0.16));
+}
+const campoTemperatura = document.querySelector("#weather-temperature");
+const campoVento = document.querySelector("#weather-wind-speed");
+const campoSensacao = document.querySelector("#weather-feels-like");
+if (campoTemperatura && campoVento && campoSensacao) {
+    campoTemperatura.textContent = temperatura;
+    campoVento.textContent = velocidadeVento;
+    const resultado = calcularSensacaoTermica(
+        temperatura,
+        velocidadeVento
+    );
+    campoSensacao.textContent = resultado.toFixed(1);
+}
+function atualizarDataHora() {
+    const agora = new Date();
+    const data = document.querySelector("#local-date");
+    const hora = document.querySelector("#local-time");
+    if (data) {
+        data.textContent = new Intl.DateTimeFormat("pt-BR", {
+            weekday: "long",
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+            timeZone: fusoHorario
+        }).format(agora);
+    }
+    if (hora) {
+        hora.textContent = new Intl.DateTimeFormat("pt-BR", {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false,
+            timeZone: fusoHorario
+        }).format(agora);
+    }
+}
+atualizarDataHora();
+setInterval(atualizarDataHora, 1000);
+const campoAno = document.querySelector("#current-year");
+if (campoAno) {
+    campoAno.textContent = new Date().getFullYear();
+}
+const campoModificacao = document.querySelector("#last-modified");
+if (campoModificacao) {
+    const ultimaModificacao = new Date(document.lastModified);
+    if (!Number.isNaN(ultimaModificacao.getTime())) {
+        campoModificacao.textContent = new Intl.DateTimeFormat("pt-BR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+            timeZone: fusoHorario
+        }).format(ultimaModificacao);
+        campoModificacao.dateTime = ultimaModificacao.toISOString();
+    } else {
+        campoModificacao.textContent = "Data indisponível";
+    }
+}

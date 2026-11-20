@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aleksandro Ribeiro Monteiro">
+    <meta name="description"
+        content="Conheça Belém do Pará, sua história, cultura e pontos turísticos. Explore o Ver-o-Peso, um dos principais cartões-postais da capital paraense.">
+    <title>Belém do Pará | Cartão-postal da Amazônia</title>
+    <link rel="stylesheet" href="estilos/local.css">
+    <script src="scripts/local.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <h1>Belém do Pará</h1>
+
+    </header>
+
+    <main class="page-layout">
+
+        <section class="hero" aria-labelledby="hero-title">
+
+            <h2 id="hero-title" class="visually-hidden">
+                Ver-o-Peso
+            </h2>
+
+            <figure class="hero-figure">
+
+                <img class="hero-image" src="imagens/belem-capital.jpg"
+                    alt="Vista do complexo do Ver-o-Peso, um dos cartões-postais de Belém do Pará">
+
+                <figcaption>
+                    Ver-o-Peso — um dos símbolos de Belém
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+        <section class="data-card" aria-labelledby="data-title">
+
+            <h2 id="data-title">Dados do lugar</h2>
+
+            <dl>
+
+                <div class="data-item">
+                    <dt>Área territorial:</dt>
+                    <dd>1.059,458 km²</dd>
+                </div>
+
+                <div class="data-item">
+                    <dt>População estimada (2026):</dt>
+                    <dd>1.396.157 habitantes</dd>
+                </div>
+
+
+                <div class="data-item">
+                    <dt>País:</dt>
+                    <dd>Brasil</dd>
+                </div>
+
+                <div class="data-item">
+                    <dt>Estado:</dt>
+                    <dd>Pará</dd>
+                </div>
+
+                <div class="data-item">
+                    <dt>Região:</dt>
+                    <dd>Norte</dd>
+                </div>
+
+                <div class="data-item">
+                    <dt>Fuso horário:</dt>
+                    <dd id="time-zone">UTC-3 (America/Belem)</dd>
+                </div>
+
+                <div class="data-item">
+
+                    <div class="data-item">
+                        <dt>Código internacional:</dt>
+                        <dd>+55 (91)</dd>
+                    </div>
+
+                </div>
+            </dl>
+
+        </section>
+
+        <section class="weather-card" aria-labelledby="weather-title">
+
+            <h2 id="weather-title">Clima em Belém</h2>
+
+            <div class="weather-content">
+
+                <img class="weather-icon" src="imagens/3d-weather-icon.png"
+                    alt="Ícone representando as condições meteorológicas">
+
+                <dl>
+
+
+                    <div class="weather-item">
+                        <dt>Temperatura:</dt>
+                        <dd>
+                            <span id="weather-temperature">27</span> °C
+                        </dd>
+                    </div>
+
+                    <div class="weather-item">
+                        <dt>Condição:</dt>
+                        <dd id="weather-condition">
+                            Parcialmente nublado
+                        </dd>
+                    </div>
+
+                    <div class="weather-item">
+                        <dt>Sensação térmica:</dt>
+                        <dd>
+                            <span id="weather-feels-like">--</span> °C
+                        </dd>
+                    </div>
+
+                    <div class="weather-item">
+                        <dt>Umidade:</dt>
+                        <dd>
+                            <span id="weather-humidity">90</span> %
+                        </dd>
+                    </div>
+
+                    <div class="weather-item">
+                        <dt>Velocidade do vento:</dt>
+                        <dd>
+                            <span id="weather-wind-speed">10</span> km/h
+                        </dd>
+                    </div>
+                </dl>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<footer class="site-footer">
+
+    <p>
+        &copy;2026 <span id="current-year"></span>
+        😊Aleksandro Ribeiro Monteiro🤞 | Belém-PA
+    </p>
+
+    <p>
+        Última modificação:
+        <time id="last-modified">
+            Aguardando atualização
+        </time>
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
