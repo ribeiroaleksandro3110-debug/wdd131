@@ -180,7 +180,7 @@ h2 {
 }
 
 .data-item dt {
-    color: var(--cinza-escuro);
+    color: var(--preto);
     font-weight: 700;
     font-size: 0.83rem;
 }
@@ -228,7 +228,7 @@ h2 {
 }
 
 .weather-item dt {
-    color: var(--cinza-escuro);
+    color: var(--preto);
     font-size: 0.82rem;
     font-weight: 700;
     flex: 1;
