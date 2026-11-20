@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/local.css">
+    <link rel="stylesheet" href="estilos/local_mobile.css">
     <script src="scripts/local.js" defer></script>
 </head>
 
@@ -30,7 +31,7 @@
             <figure class="hero-figure">
 
                 <picture>
-                    <source media="(max-width: 650px)" srcset="imagens/belem_do_para.jpg">
+                    <source media="(max-width: 650px)" srcset="imagens/belem_do_para.webp">
                     <img class="hero-image" src="imagens/belem_do_para.webp"
                         alt="Vista do complexo do Ver-o-Peso, um dos cartões-postais de Belém do Pará">
                 </picture>
@@ -43,9 +44,9 @@
 
         </section>
 
-        <section class="data-card" aria-labelledby="data-title">
+        <section class="data-card" aria-labelledby="titulo-dados">
 
-            <h2 id="data-title">Dados do lugar</h2>
+            <h2 id="titulo-dados">Dados do lugar</h2>
 
             <dl>
 
@@ -58,7 +59,6 @@
                     <dt>População estimada (2026):</dt>
                     <dd>1.396.157 habitantes</dd>
                 </div>
-
 
                 <div class="data-item">
                     <dt>País:</dt>
@@ -88,9 +88,9 @@
 
         </section>
 
-        <section class="weather-card" aria-labelledby="weather-title">
+        <section class="weather-card" aria-labelledby="titulo-clima">
 
-            <h2 id="weather-title">Clima em Belém</h2>
+            <h2 id="titulo-clima">Clima em Belém</h2>
 
             <div class="weather-content">
 
@@ -102,13 +102,13 @@
                     <div class="weather-item">
                         <dt>Temperatura:</dt>
                         <dd>
-                            <span id="weather-temperature">27</span> °C
+                            <span id="temperatura">33</span> °C
                         </dd>
                     </div>
 
                     <div class="weather-item">
                         <dt>Condição:</dt>
-                        <dd id="weather-condition">
+                        <dd id="condicao-clima">
                             Parcialmente nublado
                         </dd>
                     </div>
@@ -116,21 +116,21 @@
                     <div class="weather-item">
                         <dt>Sensação térmica:</dt>
                         <dd>
-                            <span id="weather-feels-like">--</span> °C
+                            <span id="sensacao-termica">--</span> °C
                         </dd>
                     </div>
 
                     <div class="weather-item">
                         <dt>Umidade:</dt>
                         <dd>
-                            <span id="weather-humidity">90</span> %
+                            <span id="umidade">90</span> %
                         </dd>
                     </div>
 
                     <div class="weather-item">
                         <dt>Velocidade do vento:</dt>
                         <dd>
-                            <span id="weather-wind-speed">10</span> km/h
+                            <span id="velocidade-vento">10</span> km/h
                         </dd>
                     </div>
                 </dl>
@@ -144,13 +144,13 @@
 <footer class="site-footer">
 
     <p>
-        &copy; <span id="current-year"></span>
+        &copy; <span id="ano-atual"></span>
         😊Aleksandro Ribeiro Monteiro🤞 | Belém-PA
     </p>
 
     <p>
         Última modificação:
-        <time id="last-modified" datetime="2026-11-20T10:45:00Z">
+        <time id="ultima-modificacao" datetime="2026-11-20T10:45:00Z">
             20/11/2026, 07:45
         </time>
     </p>

@@ -1,9 +1,9 @@
 function calcularSensacaoTermica(temperatura, velocidadeVento) {
     return 13.12 + (0.6215 * temperatura) - (11.37 * Math.pow(velocidadeVento, 0.16)) + (0.3965 * temperatura * Math.pow(velocidadeVento, 0.16));
 }
-const campoTemperatura = document.querySelector("#weather-temperature");
-const campoVento = document.querySelector("#weather-wind-speed");
-const campoSensacao = document.querySelector("#weather-feels-like");
+const campoTemperatura = document.querySelector("#temperatura");
+const campoVento = document.querySelector("#velocidade-vento");
+const campoSensacao = document.querySelector("#sensacao-termica");
 if (campoTemperatura && campoVento && campoSensacao) {
     const temperatura = Number(campoTemperatura.textContent);
     const velocidadeVento = Number(campoVento.textContent);
@@ -17,11 +17,11 @@ if (campoTemperatura && campoVento && campoSensacao) {
     }
 }
 
-const campoAno = document.querySelector("#current-year");
+const campoAno = document.querySelector("#ano-atual");
 if (campoAno) {
     campoAno.textContent = new Date().getFullYear();
 }
-const campoModificacao = document.querySelector("#last-modified");
+const campoModificacao = document.querySelector("#ultima-modificacao");
 if (campoModificacao) {
     const ultimaModificacao = new Date(document.lastModified);
     if (!Number.isNaN(ultimaModificacao.getTime())) {
